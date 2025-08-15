@@ -1,7 +1,7 @@
 {
-  "name": "sherlocks-sanity-library",
+  "name": "@RaoulHofmann/sherlocks-sanity-library",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/sherlocks-sanity-library.js",
   "types": "dist/main.d.ts",
