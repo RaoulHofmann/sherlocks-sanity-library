@@ -1,11 +1,18 @@
 {
   "name": "sherlocks-sanity-library",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "main": "dist/sherlocks-sanity-library.js",
   "types": "dist/main.d.ts",
   "files": ["dist"],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RaoulHofmann/sherlocks-sanity-library.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
