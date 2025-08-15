@@ -1,0 +1,1 @@
+export { default as SanityCustomContent } from './SanityCustomContent.vue'
