@@ -1,0 +1,259 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@tailwind utilities;
+
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --background: var(--parchment);
+  --foreground: var(--navy-deep);
+  --card: var(--cream-light);
+  --card-foreground: var(--navy-deep);
+  --popover: var(--parchment);
+  --popover-foreground: var(--navy-deep);
+  --primary: var(--navy-deep);
+  --primary-foreground: var(--parchment);
+  --secondary: var(--amber-warm);
+  --secondary-foreground: var(--navy-deep);
+  --muted: var(--cream-muted);
+  --muted-foreground: var(--navy-medium);
+  --accent: var(--copper-rich);
+  --accent-foreground: var(--parchment);
+  --destructive: var(--crimson);
+  --destructive-foreground: var(--parchment);
+  --border: var(--cream-border);
+  --input: var(--parchment);
+  --ring: var(--amber-warm);
+  --chart-1: var(--navy-deep);
+  --chart-2: var(--amber-warm);
+  --chart-3: var(--copper-rich);
+  --chart-4: var(--navy-medium);
+  --chart-5: var(--amber-light);
+  --radius: 0.625rem;
+  --sidebar: var(--cream-light);
+  --sidebar-foreground: var(--navy-deep);
+  --sidebar-primary: var(--navy-deep);
+  --sidebar-primary-foreground: var(--parchment);
+  --sidebar-accent: var(--amber-light);
+  --sidebar-accent-foreground: var(--navy-deep);
+  --sidebar-border: var(--cream-border);
+  --sidebar-ring: var(--amber-warm);
+
+  /* Victorian Detective Palette */
+  --navy-deep: hsla(220, 39%, 15%, 1); /* Deep navy blue - primary */
+  --navy-medium: hsla(220, 25%, 25%, 1); /* Medium navy */
+  --navy-light: hsla(220, 15%, 35%, 1); /* Light navy */
+  --amber-warm: hsla(38, 90%, 55%, 1); /* Warm amber/gold - secondary */
+  --amber-light: hsla(42, 85%, 65%, 1); /* Light amber */
+  --amber-dark: hsla(35, 95%, 45%, 1); /* Dark amber */
+  --copper-rich: hsla(25, 85%, 40%, 1); /* Rich copper - accent */
+  --copper-light: hsla(30, 75%, 50%, 1); /* Light copper */
+  --parchment: hsla(45, 40%, 96%, 1); /* Warm white/cream background */
+  --cream-light: hsla(45, 30%, 92%, 1); /* Light cream for cards */
+  --cream-muted: hsla(45, 20%, 88%, 1); /* Muted cream */
+  --cream-border: hsla(45, 25%, 85%, 1); /* Border cream */
+  --charcoal: hsla(220, 15%, 15%, 1); /* Deep charcoal */
+  --crimson: hsla(355, 75%, 50%, 1); /* Error red */
+
+  /* Additional Victorian colors for variety */
+  --burgundy: hsla(345, 65%, 25%, 1); /* Deep burgundy */
+  --brass: hsla(48, 85%, 45%, 1); /* Brass accent */
+  --leather-brown: hsla(25, 45%, 25%, 1); /* Rich brown leather */
+  --gaslight: hsla(42, 95%, 75%, 1); /* Soft gaslight glow */
+  --fog-gray: hsla(210, 10%, 75%, 1); /* London fog gray */
+  --emerald-dark: hsla(155, 45%, 25%, 1); /* Dark emerald */
+}
+
+.dark {
+  --background: var(--navy-deep);
+  --foreground: var(--parchment);
+  --card: hsla(220, 39%, 10%, 1);
+  --card-foreground: var(--parchment);
+  --popover: hsla(220, 39%, 10%, 1);
+  --popover-foreground: var(--parchment);
+  --primary: var(--amber-warm);
+  --primary-foreground: var(--navy-deep);
+  --secondary: var(--navy-medium);
+  --secondary-foreground: var(--amber-light);
+  --muted: var(--navy-medium);
+  --muted-foreground: var(--amber-light);
+  --accent: var(--copper-rich);
+  --accent-foreground: var(--parchment);
+  --destructive: var(--crimson);
+  --destructive-foreground: var(--parchment);
+  --border: var(--navy-medium);
+  --input: hsla(220, 39%, 8%, 1);
+  --ring: var(--amber-warm);
+  --chart-1: var(--amber-warm);
+  --chart-2: var(--copper-rich);
+  --chart-3: var(--amber-light);
+  --chart-4: var(--copper-light);
+  --chart-5: var(--gaslight);
+  --sidebar: hsla(220, 39%, 8%, 1);
+  --sidebar-foreground: var(--parchment);
+  --sidebar-primary: var(--amber-warm);
+  --sidebar-primary-foreground: var(--navy-deep);
+  --sidebar-accent: var(--navy-medium);
+  --sidebar-accent-foreground: var(--amber-light);
+  --sidebar-border: var(--navy-medium);
+  --sidebar-ring: var(--amber-warm);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Add subtle texture for Victorian feel */
+    background-image: radial-gradient(circle at 1px 1px, rgba(220, 205, 180, 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  ul {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    list-style: disc;
+    list-style-position: inside;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--navy-deep), var(--navy-medium));
+    border-bottom: 1px solid var(--copper-rich);
+    box-shadow: 0 4px 12px rgba(38, 50, 80, 0.15) !important;
+    position: fixed;
+  }
+
+  footer {
+    background: linear-gradient(135deg, var(--navy-deep), var(--navy-medium));
+    border-top: 1px solid var(--copper-rich);
+    box-shadow: 0 4px 12px rgba(38, 50, 80, 0.15) !important;
+    height: 3rem;
+    /*margin-top: 4rem;*/
+  }
+
+  h1 {
+    padding-top: 2rem;
+    @apply text-4xl font-bold tracking-tight text-foreground mb-6;
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold tracking-tight text-foreground mb-4 mt-8;
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold tracking-tight text-foreground mb-3 mt-6;
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
+
+  h4 {
+    @apply text-xl font-medium tracking-tight text-foreground mb-2 mt-4;
+  }
+
+  h5 {
+    @apply text-lg font-medium tracking-tight text-foreground mb-2 mt-3;
+  }
+
+  h6 {
+    @apply text-base font-medium tracking-tight text-foreground mb-2 mt-2;
+  }
+
+  /* Victorian-inspired accents */
+  .detective-accent {
+    background: linear-gradient(135deg, var(--amber-warm), var(--copper-rich));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gaslight-glow {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+  }
+
+  .magnifying-glass-border {
+    border: 3px solid var(--copper-rich);
+    border-radius: 50%;
+  }
+
+  /* Code blocks with detective theme */
+  pre, code {
+    background: var(--cream-light);
+  }
+
+  /* Buttons with Victorian style */
+  .btn-detective {
+    background: linear-gradient(145deg, var(--navy-deep), var(--navy-medium));
+    color: var(--amber-warm);
+    border: 2px solid var(--copper-rich);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .btn-detective:hover {
+    background: linear-gradient(145deg, var(--amber-warm), var(--amber-dark));
+    color: var(--navy-deep);
+    border-color: var(--navy-deep);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  }
+
+  .detective-brand {
+    color: var(--amber-warm);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .detective-cta {
+    background: linear-gradient(145deg, var(--amber-warm), var(--amber-dark));
+    color: var(--navy-deep);
+    border: 1px solid var(--copper-rich);
+  }
+
+  .detective-cta:hover {
+    background: linear-gradient(145deg, var(--copper-rich), var(--copper-light));
+    color: var(--parchment);
+    border-color: var(--amber-warm);
+  }
+}
