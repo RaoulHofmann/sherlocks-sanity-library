@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { PortableText } from '@portabletext/vue'
 import { SanityCardGrid } from "@/components/sanity-card-grid";
 import { h } from "vue";
 import type { CardGridType } from "@/types/sanity";
@@ -12,5 +13,5 @@ const components = {
 }
 </script>
 <template>
-  <SanityContent :value="content" :components="components" />
+  <PortableText :value="content" :components="components" />
 </template>

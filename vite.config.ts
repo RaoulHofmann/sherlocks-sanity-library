@@ -21,7 +21,7 @@ export default defineConfig({
   build: {
     copyPublicDir: false,
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', '@portabletext/vue'],
     },
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
