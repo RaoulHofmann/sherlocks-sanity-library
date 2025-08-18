@@ -32,3 +32,36 @@ export type CardGridType = {
     cardStyle?: 'default' | 'bordered' | 'shadow' | 'minimal'
   }
 }
+
+export type SanityImage = {
+    _type: 'image'
+    asset: { _ref: string; _type: 'reference', url?: string }
+    alt?: string
+}
+
+export type SanityBlock = {
+    _type: 'block'
+    _key: string
+    children: Array<{
+        _type: 'span'
+        _key: string
+        text: string
+        marks?: string[]
+    }>
+    markDefs?: Array<{
+        _type: string
+        _key: string
+        [key: string]: any
+    }>
+    style?: string
+    listItem?: string
+    level?: number
+}
+
+export type TextImageType = {
+    _type: 'textImage'
+    title: string
+    image?: SanityImage
+    caption?: SanityBlock[]
+    body: (SanityImage | SanityBlock)[]
+}

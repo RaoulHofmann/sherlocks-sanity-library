@@ -1,17 +1,33 @@
 <script setup lang="ts">
+import type {SanityBlock, SanityImage} from "@/types/sanity";
+import {SanityCustomContent} from "@/components/sanity-custom-content";
+import urlBuilder from '@sanity/image-url';
+
+defineProps<{
+  img?: string,
+  caption?: SanityBlock[],
+  content?: (SanityImage | SanityBlock)[],
+}>()
 </script>
 
 <template>
   <div class="text-image-container">
     <figure class="image-section">
-      <slot name="img" />
-      <figcaption v-if="$slots.caption" class="caption">
-        <slot name="caption" />
+      <img v-if="img" class="rounded-full" :src="urlBuilder()
+      .projectId('ctarui6k')
+      .dataset('production')
+      .width(200)
+      .image(img)
+      .fit('max')
+      .auto('format')
+      .url()" alt="Image" />
+      <figcaption v-if="caption" class="caption">
+        <SanityCustomContent :content="caption" />
       </figcaption>
     </figure>
 
-    <div v-if="$slots.text" class="text-content">
-      <slot name="text" />
+    <div v-if="content" class="text-content">
+      <SanityCustomContent :content="content" />
     </div>
   </div>
 </template>
