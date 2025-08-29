@@ -1,12 +1,15 @@
 {
   "name": "@RaoulHofmann/sherlocks-sanity-library",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "main": "dist/sherlocks-sanity-library.js",
   "types": "dist/main.d.ts",
   "files": [
     "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
