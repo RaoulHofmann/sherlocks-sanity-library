@@ -1,7 +1,7 @@
 {
   "name": "@RaoulHofmann/sherlocks-sanity-library",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "dist/sherlocks-sanity-library.js",
   "types": "dist/main.d.ts",
@@ -23,10 +23,8 @@
   },
   "peerDependencies": {
     "@portabletext/vue": "^1.0.12",
-    "@tailwindcss/vite": "^4.1.12",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.3.1",
-    "tw-animate-css": "^1.3.6",
     "vue": "^3.5.18",
     "@sanity/image-url": "^1.1.0"
   },
